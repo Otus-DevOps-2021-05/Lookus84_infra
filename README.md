@@ -14,3 +14,5 @@
 	    HostName someinternalhost
 	    User appuser
 	    Port 22
+
+При этом необходимо внести указанные хосты в /etc/hosts
