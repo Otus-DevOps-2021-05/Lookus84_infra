@@ -47,8 +47,8 @@ Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your 
 Last login: Thu Jul 15 13:06:58 2021 from 10.128.0.4
 appuser@someinternalhost:~$
 
-bastion_IP = 84.201.157.102
-someinternalhost_IP = 10.129.0.25
+bastion_IP=84.201.157.102
+someinternalhost_IP=10.129.0.25
 
 #Выполнено ДЗ №4
 
@@ -58,5 +58,5 @@ someinternalhost_IP = 10.129.0.25
 	3. Установил mongodb используя install_mongodb.sh
 	4. Установил приложение reddit используя deploy.sh
 	5. Доп. задание: создал скрипт и yaml для автоматического создания и установки приложения. Данные автоматически созданного хоста(для проверки приложения)
-		testapp_IP = 84.252.133.140
-	    testapp_port = 9292
+		testapp_IP=84.252.133.140
+	    testapp_port=9292
