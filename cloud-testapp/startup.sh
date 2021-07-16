@@ -1,4 +1,4 @@
-#cloud-config
+#!/bin/bash
 yc compute instance create \
   --name reddit-app-hw4 \
   --hostname reddit-app-hw4 \
