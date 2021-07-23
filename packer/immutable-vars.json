@@ -1,0 +1,10 @@
+{
+  "folder_id": "b1gf0t46quh91ma3q0m1",
+  "source_image_id": "fd8dhsouoede05f5v0ff",
+  "source_image_name": "reddit-base-1626979079",
+  "target_image_folder_id": "b1gf0t46quh91ma3q0m1",
+  "service_account_key_file": "/home/ubuntu/key.json",
+  "image_family": "reddit-full",
+  "ssh_username": "ubuntu",
+  "platform_id": "standard-v1"
+}
