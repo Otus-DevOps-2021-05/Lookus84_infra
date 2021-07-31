@@ -5,7 +5,6 @@
             "service_account_key_file": "{{user `service_account_key_file`}}",
             "folder_id": "{{user `folder_id`}}",
             "source_image_family":"{{user `source_image_family`}}",
-            "target_image_folder_id": "{{user `target_image_folder_id`}}",
             "image_name": "reddit-db-base",
             "image_family": "reddit-base",
             "use_ipv4_nat": true,
