@@ -1,3 +1,13 @@
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
+}
+
+variable "db_disk_image" {
+  description = "Disk image for db"
+  default     = "reddit-db-base"
+}
+
 variable "cloud_id" {
   description = "Cloud"
 }
@@ -7,7 +17,7 @@ variable "folder_id" {
 variable "zone" {
   description = "Zone"
   # Значение по умолчанию
-  default = "ru-central1-c"
+  default = "ru-central1-a"
 }
 variable "public_key_path" {
   # Описание переменной
@@ -22,14 +32,6 @@ variable "subnet_id" {
 variable "service_account_key_file" {
   description = "key.json"
 }
-variable "private_key_path" {
-  description = "Path to private key used for ssh access"
-}
-variable "region_id" {
-  description = "ID of the availability zone where the network load balancer resides"
-  default     = "ru-central1"
-}
-variable "count_of_instances" {
-  description = "Count of instances"
-  default     = 1
+variable "ssh_private_key_path" {
+  description = "ssh_private_key_path"
 }
