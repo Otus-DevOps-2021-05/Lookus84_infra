@@ -1,0 +1,7 @@
+{
+  "folder_id": "fdsffsd91ma3q0m1",
+  "subnet_id": "sft4vqt4tl",
+  "source_image_family": "ubuntu-1604-lts",
+  "service_account_key_file": "key.json",
+  "IMAGE_FAMILY": "reddit-base"
+}
