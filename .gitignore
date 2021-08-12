@@ -6,3 +6,5 @@ variables.json
 *.tfvars
 .terraform.lock*
 .terraform/
+*.otus_examples/
+*.retry
