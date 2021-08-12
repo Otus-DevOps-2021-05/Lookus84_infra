@@ -9,7 +9,7 @@
       become: true
       apt:
         name: git
-        state: latest
+        state: present
     -
       name: "Fetch the latest version of application code"
       git:
