@@ -8,3 +8,5 @@ variables.json
 .terraform/
 *.otus_examples/
 *.retry
+jdauphant.nginx
+vault.key

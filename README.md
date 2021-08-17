@@ -1,67 +1,43 @@
-#Выполнено ДЗ №8
+
+#Выполнено ДЗ №10
+- Перенесены созданные плейбуки в раздельные роли
+- Описаны два окружения (+ вывод информации об окружении во время выполнения буки)
+- Использовал коммьюнити роль nginx (jdauphant.nginx)
+- Использовал Ansible Vault для наших окружений (users.yml, добавлен в site.yml)
+ Результат: в сисему добавлены юзеры:
 
 
-Установлен pip
+- ssh admin@178.154.205.80
+admin@178.154.205.80's password:
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-142-generic x86_64)
 
-Установлен ansible
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
 
-Подняты образы app и db
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
 
-Создан ansible.cfg, отредактирован inventory
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
 
-Создан inventory.yml:
+$
 
-ansible$ ansible all -m ping -i inventory.yml
 
-appserver | SUCCESS => {
-"ansible_facts": {
-"discovered_interpreter_python": "/usr/bin/python3"
-},
-"changed": false,
-"ping": "pong"
-}
-dbserver | SUCCESS => {
-"ansible_facts": {
-"discovered_interpreter_python": "/usr/bin/python3"
-},
-"changed": false,
-"ping": "pong"
-}
+- ssh qauser@178.154.205.80
+qauser@178.154.205.80's password:
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-142-generic x86_64)
 
-ansible app -m shell -a 'ruby -v; bundler -v'
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
 
-appserver | CHANGED | rc=0 >>
-ruby 2.3.1p112 (2016-04-26) [x86_64-linux-gnu]
-Bundler version 1.11.2
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
 
-Создан clone.yml
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
 
-Выполним ansible-playbook clone.yml
-
-PLAY [Clone] *************************************************************************************************************************************************************************************
-
-TASK [Gathering Facts] ***************************************************************************************************************************************************************************
-ok: [appserver]
-
-TASK [Clone repo] ********************************************************************************************************************************************************************************
-ok: [appserver]
-
-PLAY RECAP ***************************************************************************************************************************************************************************************
-appserver : ok=2 changed=0 unreachable=0 failed=0 skipped=0 rescued=0 ignored=0
-
-выполним ansible app -m command -a 'rm -rf ~/reddit'
-
-Повторим предыдущую команду:
-
-PLAY [Clone] *************************************************************************************************************************************************************************************
-
-TASK [Gathering Facts] ***************************************************************************************************************************************************************************
-ok: [appserver]
-
-TASK [Clone repo] ********************************************************************************************************************************************************************************
-changed: [appserver]
-
-PLAY RECAP ***************************************************************************************************************************************************************************************
-appserver : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ignored=0
-
------ на этот раз changed=1 - потому, что мы удалили  каталог reddit в домашней директории.  до удаления ansible ничего не нужно было делать, тк  репозиторий был уже установлен.
+$
